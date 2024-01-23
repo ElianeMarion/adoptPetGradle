@@ -1,8 +1,10 @@
 package br.com.adoptpet.entrypoint.controller;
 
 import br.com.adoptpet.core.domain.adotante.Adotante;
+import br.com.adoptpet.core.usecase.adotante.AlterarAdotanteUseCase;
 import br.com.adoptpet.core.usecase.adotante.BuscarAdotantePorNomeUseCase;
 import br.com.adoptpet.core.usecase.adotante.InserirAdotanteUseCase;
+import br.com.adoptpet.dataprovider.entities.adotante.AdotanteEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,8 @@ public class AdotanteController {
     private InserirAdotanteUseCase inserirAdotanteUseCase;
     @Autowired
     private BuscarAdotantePorNomeUseCase buscarAdotantePorCpfUseCase;
+    @Autowired
+    private AlterarAdotanteUseCase alterarAdotante;
 
     @GetMapping("/{nome}")
     public ResponseEntity<Adotante> findByNome(@PathVariable String nome) throws Exception {
@@ -29,4 +33,11 @@ public class AdotanteController {
         return ResponseEntity.status(HttpStatusCode.valueOf(201)).body(adotante);
     }
 
+    @PutMapping("/{nome}")
+    public ResponseEntity<Adotante> update(@PathVariable String nome,
+                                           @RequestBody Adotante adotante) throws Exception {
+        alterarAdotante.update(adotante);
+        return ResponseEntity.ok(adotante);
+
+    }
 }
