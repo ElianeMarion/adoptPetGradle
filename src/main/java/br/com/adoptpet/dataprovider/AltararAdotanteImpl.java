@@ -2,7 +2,6 @@ package br.com.adoptpet.dataprovider;
 
 import br.com.adoptpet.core.dataprovider.adotante.AlterarAdotante;
 import br.com.adoptpet.core.domain.adotante.Adotante;
-import br.com.adoptpet.dataprovider.entities.adotante.AdotanteEntity;
 import br.com.adoptpet.dataprovider.mapper.AdotanteEntityMapper;
 import br.com.adoptpet.dataprovider.repository.AdotanteRepository;
 import org.springframework.beans.factory.annotation.Autowired;

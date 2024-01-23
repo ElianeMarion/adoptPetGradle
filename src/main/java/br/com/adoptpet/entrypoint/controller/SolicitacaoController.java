@@ -1,8 +1,5 @@
 package br.com.adoptpet.entrypoint.controller;
 
-import br.com.adoptpet.core.dataprovider.adotante.BuscarAdotantePorNome;
-import br.com.adoptpet.core.dataprovider.solicitacao_adocao.BuscarSolicitacao;
-import br.com.adoptpet.core.domain.pet.Pet;
 import br.com.adoptpet.core.domain.shared.enums.StatusSolicitacaoEnum;
 import br.com.adoptpet.core.domain.solicitacao_adocao.Solicitacao;
 import br.com.adoptpet.core.usecase.funcionario.BuscarFuncionarioUseCase;

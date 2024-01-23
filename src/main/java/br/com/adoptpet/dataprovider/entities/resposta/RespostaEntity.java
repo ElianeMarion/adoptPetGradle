@@ -1,7 +1,6 @@
 package br.com.adoptpet.dataprovider.entities.resposta;
 
 import br.com.adoptpet.core.domain.shared.enums.StatusSolicitacaoEnum;
-import br.com.adoptpet.core.domain.solicitacao_adocao.Solicitacao;
 import br.com.adoptpet.dataprovider.entities.solicitacao_adocao.SolicitacaoEntity;
 import jakarta.persistence.*;
 import lombok.Getter;

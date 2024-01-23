@@ -1,6 +1,5 @@
 package br.com.adoptpet.entrypoint.controller;
 
-import br.com.adoptpet.core.domain.adotante.Adotante;
 import br.com.adoptpet.core.domain.funcionario.Funcionario;
 import br.com.adoptpet.core.usecase.funcionario.BuscarFuncionarioUseCase;
 import br.com.adoptpet.core.usecase.funcionario.InserirFuncionarioUseCase;

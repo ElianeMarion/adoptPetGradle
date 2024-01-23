@@ -5,7 +5,6 @@ import br.com.adoptpet.core.domain.shared.enums.StatusPetEnum;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.TableGenerator;
 import lombok.Getter;
 import lombok.Setter;
 

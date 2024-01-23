@@ -3,17 +3,6 @@ package br.com.adoptpet.dataprovider.entities.shared;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-/*
-* create table endereco(
-id serial primary key,
-endereco varchar(100),
-cep varchar(8),
-cidade varchar(50),
-estado varchar(2),
-bairro varchar(30),
-numero varchar(10)
-);
-* */
 
 @Getter
 @Setter

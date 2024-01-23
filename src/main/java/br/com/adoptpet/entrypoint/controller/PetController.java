@@ -1,9 +1,6 @@
 package br.com.adoptpet.entrypoint.controller;
 
-import br.com.adoptpet.core.dataprovider.pet.BuscarPetPorRegistro;
-import br.com.adoptpet.core.domain.adotante.Adotante;
 import br.com.adoptpet.core.domain.pet.Pet;
-import br.com.adoptpet.core.usecase.adotante.InserirAdotanteUseCase;
 import br.com.adoptpet.core.usecase.pet.BuscarPetPorRacaUseCase;
 import br.com.adoptpet.core.usecase.pet.BuscarPetPorRegistroUseCase;
 import br.com.adoptpet.core.usecase.pet.BuscarPetUseCase;

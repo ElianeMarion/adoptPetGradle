@@ -1,6 +1,5 @@
 package br.com.adoptpet.entrypoint.controller;
 
-import br.com.adoptpet.core.domain.adotante.Adotante;
 import br.com.adoptpet.core.domain.ong.Ong;
 import br.com.adoptpet.core.usecase.ong.BuscarOngPorCnpjUseCase;
 import br.com.adoptpet.core.usecase.ong.InserirOngUseCase;

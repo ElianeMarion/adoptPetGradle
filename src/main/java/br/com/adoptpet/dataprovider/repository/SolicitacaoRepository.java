@@ -1,8 +1,6 @@
 package br.com.adoptpet.dataprovider.repository;
 
-import br.com.adoptpet.core.domain.shared.Pessoa;
 import br.com.adoptpet.core.domain.shared.enums.StatusSolicitacaoEnum;
-import br.com.adoptpet.core.domain.solicitacao_adocao.Solicitacao;
 import br.com.adoptpet.dataprovider.entities.shared.PessoaEntity;
 import br.com.adoptpet.dataprovider.entities.solicitacao_adocao.SolicitacaoEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
