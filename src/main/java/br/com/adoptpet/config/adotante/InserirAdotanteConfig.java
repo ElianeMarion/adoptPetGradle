@@ -1,7 +1,5 @@
 package br.com.adoptpet.config.adotante;
 
-import br.com.adoptpet.core.dataprovider.adotante.InserirAdotante;
-import br.com.adoptpet.core.dataprovider.endereco.InserirEndereco;
 import br.com.adoptpet.core.usecase.adotante.impl.InserirAdotanteUseCaseImpl;
 import br.com.adoptpet.dataprovider.InserirAdotanteImpl;
 import br.com.adoptpet.dataprovider.InserirEnderecoImpl;
