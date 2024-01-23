@@ -14,6 +14,6 @@ public class InserirAdotanteConfig {
     public InserirAdotanteUseCaseImpl inserirAdotanteUseCase(
             InserirEnderecoImpl inserirEndereco,
             InserirAdotanteImpl inserirAdotante){
-        return new InserirAdotanteUseCaseImpl((InserirEndereco) inserirEndereco, (InserirAdotante) inserirAdotante);
+        return new InserirAdotanteUseCaseImpl(inserirEndereco, inserirAdotante);
     }
 }
