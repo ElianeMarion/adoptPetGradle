@@ -4,11 +4,12 @@ import br.com.adoptpet.core.domain.adotante.Adotante;
 import br.com.adoptpet.core.usecase.adotante.AlterarAdotanteUseCase;
 import br.com.adoptpet.core.usecase.adotante.BuscarAdotantePorNomeUseCase;
 import br.com.adoptpet.core.usecase.adotante.InserirAdotanteUseCase;
-import br.com.adoptpet.dataprovider.entities.adotante.AdotanteEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/adotantes")
@@ -20,6 +21,11 @@ public class AdotanteController {
     @Autowired
     private AlterarAdotanteUseCase alterarAdotante;
 
+    @GetMapping
+    public ResponseEntity<List<Adotante>> findAll() throws Exception {
+        List<Adotante> adotantes = buscarAdotantePorCpfUseCase.findAll();
+        return ResponseEntity.ok(adotantes);
+    }
     @GetMapping("/{nome}")
     public ResponseEntity<Adotante> findByNome(@PathVariable String nome) throws Exception {
         var adotante = buscarAdotantePorCpfUseCase.findByNome(nome);
