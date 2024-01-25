@@ -2,9 +2,8 @@ package br.com.adoptpet.entrypoint.controller;
 
 import br.com.adoptpet.core.domain.adotante.Adotante;
 import br.com.adoptpet.core.usecase.adotante.AlterarAdotanteUseCase;
-import br.com.adoptpet.core.usecase.adotante.BuscarAdotantePorNomeUseCase;
+import br.com.adoptpet.core.usecase.adotante.BuscarAdotanteUseCase;
 import br.com.adoptpet.core.usecase.adotante.InserirAdotanteUseCase;
-import br.com.adoptpet.core.usecase.endereco.InserirEnderecoUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -18,18 +17,18 @@ public class AdotanteController {
     @Autowired
     private InserirAdotanteUseCase inserirAdotanteUseCase;
     @Autowired
-    private BuscarAdotantePorNomeUseCase buscarAdotantePorCpfUseCase;
+    private BuscarAdotanteUseCase buscarAdotanteUseCase;
     @Autowired
     private AlterarAdotanteUseCase alterarAdotanteUseCase;
 
     @GetMapping
     public ResponseEntity<List<Adotante>> findAll() throws Exception {
-        List<Adotante> adotantes = buscarAdotantePorCpfUseCase.findAll();
+        List<Adotante> adotantes = buscarAdotanteUseCase.findAll();
         return ResponseEntity.ok(adotantes);
     }
     @GetMapping("/{nome}")
     public ResponseEntity<Adotante> findByNome(@PathVariable String nome) throws Exception {
-        var adotante = buscarAdotantePorCpfUseCase.findByNome(nome);
+        var adotante = buscarAdotanteUseCase.findByNome(nome);
         return ResponseEntity.ok(adotante);
     }
 

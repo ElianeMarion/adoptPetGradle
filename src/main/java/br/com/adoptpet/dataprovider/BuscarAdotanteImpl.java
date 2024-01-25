@@ -1,6 +1,6 @@
 package br.com.adoptpet.dataprovider;
 
-import br.com.adoptpet.core.dataprovider.adotante.BuscarAdotantePorNome;
+import br.com.adoptpet.core.dataprovider.adotante.BuscarAdotante;
 import br.com.adoptpet.core.domain.adotante.Adotante;
 import br.com.adoptpet.dataprovider.mapper.AdotanteEntityMapper;
 import br.com.adoptpet.dataprovider.repository.AdotanteRepository;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class BuscarAdotantePorNomeImpl implements BuscarAdotantePorNome {
+public class BuscarAdotanteImpl implements BuscarAdotante {
 
     @Autowired
     private AdotanteRepository adotanteRepository;

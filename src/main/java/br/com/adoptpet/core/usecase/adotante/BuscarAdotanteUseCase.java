@@ -4,7 +4,7 @@ import br.com.adoptpet.core.domain.adotante.Adotante;
 
 import java.util.List;
 
-public interface BuscarAdotantePorNomeUseCase {
+public interface BuscarAdotanteUseCase {
 
     Adotante findByNome(String nome) throws Exception;
 
