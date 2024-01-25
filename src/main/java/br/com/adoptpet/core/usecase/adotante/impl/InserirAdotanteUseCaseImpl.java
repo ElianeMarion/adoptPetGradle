@@ -12,7 +12,7 @@ public class InserirAdotanteUseCaseImpl implements InserirAdotanteUseCase {
     }
 
     @Override
-    public Adotante insert(Adotante adotante) throws Exception {
+    public Adotante insert(Adotante adotante) throws RuntimeException {
         return inserirAdotante.insert(adotante);
     }
 }

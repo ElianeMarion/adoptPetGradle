@@ -2,6 +2,6 @@ package br.com.adoptpet.core.dataprovider.endereco;
 
 import br.com.adoptpet.core.domain.shared.Endereco;
 
-public interface InserirEndereco {
-    Endereco insert(Endereco endereco) throws RuntimeException;
+public interface AtualizarEndereco {
+    Endereco update(Endereco endereco) throws RuntimeException;
 }

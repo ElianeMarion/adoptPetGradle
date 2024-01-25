@@ -21,8 +21,6 @@ public class AltararAdotanteImpl implements AlterarAdotante {
     @Autowired
     private EnderecoRepository enderecoRepository;
     @Autowired
-    private AdotanteEntityMapper mapper;
-    @Autowired
     private EnderecoEntityMapper mapperEndereco;
 
     @Override

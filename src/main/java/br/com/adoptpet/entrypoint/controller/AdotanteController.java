@@ -33,9 +33,13 @@ public class AdotanteController {
     }
 
     @PostMapping
-    public ResponseEntity<Adotante> save(@RequestBody Adotante adotante) throws Exception {
-        adotante = inserirAdotanteUseCase.insert(adotante);
-        return ResponseEntity.status(HttpStatusCode.valueOf(201)).body(adotante);
+    public ResponseEntity<Object> save(@RequestBody Adotante adotante){
+        try {
+            adotante = inserirAdotanteUseCase.insert(adotante);
+            return ResponseEntity.status(HttpStatusCode.valueOf(201)).body(adotante);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     @PutMapping

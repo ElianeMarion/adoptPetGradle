@@ -1,7 +1,7 @@
 package br.com.adoptpet.config.endereco;
 
-import br.com.adoptpet.core.usecase.endereco.impl.BuscarEnderecoPorCepUseCaseImpl;
-import br.com.adoptpet.dataprovider.BuscarEnderecoPorCepImpl;
+import br.com.adoptpet.core.usecase.endereco.impl.BuscarEnderecoUseCaseImpl;
+import br.com.adoptpet.dataprovider.BuscarEnderecoImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,8 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 public class BuscarEnderecoConfig {
     @Bean
-    public BuscarEnderecoPorCepUseCaseImpl buscarEnderecoPorCepUseCase(
-            BuscarEnderecoPorCepImpl buscarEnderecoPorCep){
-       return new BuscarEnderecoPorCepUseCaseImpl(buscarEnderecoPorCep);
+    public BuscarEnderecoUseCaseImpl buscarEnderecoUseCase(BuscarEnderecoImpl buscarEndereco){
+       return new BuscarEnderecoUseCaseImpl(buscarEndereco);
     }
 }
