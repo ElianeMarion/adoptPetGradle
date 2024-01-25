@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/funcionarios")
+@RequestMapping("/funcionario")
 public class FuncionarioController {
 
     @Autowired

@@ -4,6 +4,7 @@ import br.com.adoptpet.core.domain.adotante.Adotante;
 import br.com.adoptpet.core.usecase.adotante.AlterarAdotanteUseCase;
 import br.com.adoptpet.core.usecase.adotante.BuscarAdotantePorNomeUseCase;
 import br.com.adoptpet.core.usecase.adotante.InserirAdotanteUseCase;
+import br.com.adoptpet.core.usecase.endereco.InserirEnderecoUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -12,10 +13,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/adotantes")
+@RequestMapping("/adotante")
 public class AdotanteController {
     @Autowired
     private InserirAdotanteUseCase inserirAdotanteUseCase;
+    @Autowired
+    private InserirEnderecoUseCase inserirEnderecoUseCase;
     @Autowired
     private BuscarAdotantePorNomeUseCase buscarAdotantePorCpfUseCase;
     @Autowired
@@ -35,7 +38,6 @@ public class AdotanteController {
     @PostMapping
     public ResponseEntity<Adotante> save(@RequestBody Adotante adotante) throws Exception {
         adotante = inserirAdotanteUseCase.insert(adotante);
-
         return ResponseEntity.status(HttpStatusCode.valueOf(201)).body(adotante);
     }
 
