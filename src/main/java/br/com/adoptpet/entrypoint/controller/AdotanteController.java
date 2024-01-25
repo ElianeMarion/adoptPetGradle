@@ -18,11 +18,9 @@ public class AdotanteController {
     @Autowired
     private InserirAdotanteUseCase inserirAdotanteUseCase;
     @Autowired
-    private InserirEnderecoUseCase inserirEnderecoUseCase;
-    @Autowired
     private BuscarAdotantePorNomeUseCase buscarAdotantePorCpfUseCase;
     @Autowired
-    private AlterarAdotanteUseCase alterarAdotante;
+    private AlterarAdotanteUseCase alterarAdotanteUseCase;
 
     @GetMapping
     public ResponseEntity<List<Adotante>> findAll() throws Exception {
@@ -41,10 +39,9 @@ public class AdotanteController {
         return ResponseEntity.status(HttpStatusCode.valueOf(201)).body(adotante);
     }
 
-    @PutMapping("/{nome}")
-    public ResponseEntity<Adotante> update(@PathVariable String nome,
-                                           @RequestBody Adotante adotante) throws Exception {
-        alterarAdotante.update(adotante);
+    @PutMapping
+    public ResponseEntity<Adotante> update(@RequestBody Adotante adotante) throws Exception {
+        alterarAdotanteUseCase.update(adotante);
         return ResponseEntity.ok(adotante);
 
     }
