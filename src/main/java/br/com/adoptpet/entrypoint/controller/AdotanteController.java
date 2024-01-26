@@ -33,7 +33,7 @@ public class AdotanteController {
     }
 
     @PostMapping
-    public ResponseEntity<Object> save(@RequestBody Adotante adotante){
+    public ResponseEntity<Object> insert(@RequestBody Adotante adotante){
         try {
             adotante = inserirAdotanteUseCase.insert(adotante);
             return ResponseEntity.status(HttpStatusCode.valueOf(201)).body(adotante);

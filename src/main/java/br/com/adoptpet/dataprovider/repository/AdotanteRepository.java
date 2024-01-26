@@ -12,5 +12,6 @@ public interface AdotanteRepository extends JpaRepository<AdotanteEntity, Long> 
     Optional<AdotanteEntity> findById(Long id);
 
     AdotanteEntity findByNome(String nome);
-    //AdotanteEntity findBy(AdotanteEntity adotante);
+
+    AdotanteEntity findByEmail(String email);
 }

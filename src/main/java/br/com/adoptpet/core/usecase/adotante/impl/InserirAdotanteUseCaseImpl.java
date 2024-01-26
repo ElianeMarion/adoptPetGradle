@@ -13,6 +13,7 @@ public class InserirAdotanteUseCaseImpl implements InserirAdotanteUseCase {
 
     @Override
     public Adotante insert(Adotante adotante) throws RuntimeException {
+        inserirAdotante.emailLiberado(adotante.getEmail());
         return inserirAdotante.insert(adotante);
     }
 }
