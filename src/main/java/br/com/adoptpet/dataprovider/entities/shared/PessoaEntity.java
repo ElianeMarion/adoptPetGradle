@@ -20,7 +20,7 @@ public class PessoaEntity {
     public String telefone;
     public String email;
 
-    @OneToOne(cascade = CascadeType.DETACH)
+    @ManyToOne(cascade = CascadeType.DETACH)
     @JoinColumn
     public EnderecoEntity endereco;
     @Enumerated(EnumType.STRING)
