@@ -24,10 +24,10 @@ public class InserirEnderecoImpl implements InserirEndereco {
     public Endereco insert(Endereco endereco) throws RuntimeException {
         EnderecoEntity entity = repository.findByCep(mapper.toEnderecoEntity(endereco).getCep());
         if (enderecoSalvo(endereco, entity)) {
-            return mapper.toEndereco(entity);
+            endereco.setId(entity.getId());
         }
-        repository.save(mapper.toEnderecoEntity(endereco));
-        return mapper.toEndereco(entity);
+        EnderecoEntity result = repository.save(mapper.toEnderecoEntity(endereco));
+        return mapper.toEndereco(result);
     }
 
     private boolean enderecoSalvo(Endereco endereco, EnderecoEntity entity){
